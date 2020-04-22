@@ -39,6 +39,8 @@ To run:
 
 	python autoemail.py <NUM_RUN>
 
+NOTE: This programs assumes that you are working in the **hawk** server. If you are not working in this server, just change the `basepath` variable in the main of autoemail.py.
+
 #### Optional arguments:
 
 - `--make` or `-m` specifies which datasets you want to iterate. Choose from `mer`, `emg`, `ieeg`, `feat`, `lang`, or `all`. For more than one dataset, separate them with commas. Note that `python autoemail.py <NUM_RUN> --make all` is the same as `python autoemail.py <NUM_RUN>`.
@@ -50,6 +52,15 @@ For example, if I want to run 6 iterations of just `mer`, `feat`, and `ieeg`, th
 
 This code can be edited to add more datasets in the accepted `make` commands list, such as `dna`. Just edit the `datasets` list in **autoemail.py**!
 
+### Configure Email Details
+
+Inside **config.py**, fill in the following fields:
+
+- `sender_email`: Your email address.
+- `pwd`: Password associated with your email address. **Don't show your password to anyone!**
+- `recipient_email`: Email addresses that you want to send the "notification" to.
+- `uname`: Your username in *hawk*. This sets up the needed directories.
+
 ### Setting up Gmail account
 
 If you want to use the email feature, a Gmail account is necessary. I couldn't get it to work with bmail though so you should use a different account with this. Set it up through these steps:
@@ -58,11 +69,3 @@ If you want to use the email feature, a Gmail account is necessary. I couldn't g
 2. Turn on 'less secure apps access' through this [link](https://myaccount.google.com/lesssecureapps?pli=1).
 
 NOTE: This wouldn't work if you have 2-step verification on for your Gmail. To use this program, turn 2-step verification OFF.
-
-### Configure Email Details
-
-Input your email address and password inside **config.py**. **Don't show your password to anyone!**
-
-Also input your hawk username and the recipient/s (as a list) in config.py.
-
-NOTE: This programs assumes that you are working in the **hawk** server. If you are not working in this server, just change the `basepath` variable in the main of autoemail.py.
