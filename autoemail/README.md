@@ -65,4 +65,4 @@ Input your email address and password inside **config.py**. **Don't show your pa
 
 Also input your hawk username and the recipient/s (as a list) in config.py.
 
-NOTE: This programs assumes that you are working in the **hawk** server. If you are not working in this server, just change the basepath variable in the main of autoemail.py.
+NOTE: This programs assumes that you are working in the **hawk** server. If you are not working in this server, just change the `basepath` variable in the main of autoemail.py.
