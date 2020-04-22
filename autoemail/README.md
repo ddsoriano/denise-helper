@@ -24,10 +24,21 @@ Mel-Jie Bentz Del Mundo
 3. Finally, we ran this code in Tensorflow version **2.0** instead of 2.1.
 4. Datasets considered are **mer, emg, ieeg, feat, and lang**.
 
-## Changes to the Original (Youbin's) Code
+## Changes to the Original Code
 
 1. Saved `assoc_mem_<dataset>` as **.csv** and not .npy.
 2. In each **encode()** (per dataset.py), we used `tf.print()` to save the encoded test vectors into CSV. The vectors vary for each dataset hence it is different for each **encode()**.
+
+## Additional Scripts
+
+Since we have to iterate multiple times, the solution we did is we created a new Python script that runs the `make` commands `NUM_RUN` times. This is the **autoemail.py** script. To run:
+
+	python autoemail.py <NUM_RUN>
+
+Optional arguments:
+
+- `--make` or `-m` specifies which datasets you want to iterate. Choose from `mer`, `emg`, `ieeg`, `feat`, `lang`, or `all`. Note that `python autoemail.py <NUM_RUN> --make all` is the same as `python autoemail.py <NUM_RUN>`.
+- `--email` or `-e` if you want to email a copy of the zip file to the recipient/s of your choice. Specify the email recipients at *config.py*.
 
 ***
 
