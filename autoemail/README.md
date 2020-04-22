@@ -31,7 +31,11 @@ Mel-Jie Bentz Del Mundo
 
 ## Additional Scripts
 
-Since we have to iterate multiple times, the solution we did is we created a new Python script that runs the `make` commands `NUM_RUN` times. This is the **autoemail.py** script. To run:
+Since we have to iterate multiple times, the solution we did is we created a new Python script that runs the `make` commands `NUM_RUN` times. This is the **wrapper.py** script. It also renames all the folders per iteration and per dataset.
+
+The wrapper is then called by another script called **autoemail.py** which zips the submission folder and can automatically send the email to notify that you are done.
+
+To run:
 
 	python autoemail.py <NUM_RUN>
 
@@ -39,6 +43,15 @@ Since we have to iterate multiple times, the solution we did is we created a new
 
 - `--make` or `-m` specifies which datasets you want to iterate. Choose from `mer`, `emg`, `ieeg`, `feat`, `lang`, or `all`. Note that `python autoemail.py <NUM_RUN> --make all` is the same as `python autoemail.py <NUM_RUN>`.
 - `--email` or `-e` if you want to email a copy of the zip file to the recipient/s of your choice. Specify the email recipients at *config.py*.
+
+### Setting up Gmail account
+
+If you want to use the email feature, a Gmail account is necessary. I couldn't get it to work with bmail though so you should use a different account with this. Set it up through these steps:
+
+1. Enable POP and IMAP on your email (this can be found in Gmail settings).
+2. Turn on 'less secure apps access' through this [link](https://myaccount.google.com/lesssecureapps?pli=1).
+
+NOTE: This wouldn't work if you have 2-step verification on for your Gmail. To use this program, turn 2-step verification OFF.
 
 ***
 
@@ -50,7 +63,7 @@ No additional libraries are needed for this code.
 
 ### Setting up Gmail account
 
-For this program, it is necessary for you to use a Gmail account to send the files. To do that, here are the following steps:
+If you want to use the email feature, a Gmail account is necessary. I couldn't get it to work with bmail though so you should use a different account with this. Set it up through these steps:
 
 1. Enable POP and IMAP on your email (this can be found in Gmail settings).
 2. Turn on 'less secure apps access' through this [link](https://myaccount.google.com/lesssecureapps?pli=1).
