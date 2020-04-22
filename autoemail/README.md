@@ -1,12 +1,14 @@
 Denise Soriano
+
 Alexis Czezar Torreno
+
 Mel-Jie Bentz Del Mundo
 
 ***
 
 # List of Directories and Important Notes About the Data
 
-### Hierarchy
+## Hierarchy
 
 - Main directory: `submission_yyyy-mm-dd_hh-mm-ss_<num_of_iterations>`
 	- Subdirectories (per dataset): `<dataset>_<num_of_iterations>`, e.g. `lang_5`
@@ -17,7 +19,7 @@ Mel-Jie Bentz Del Mundo
 			- `item_memory.dat`
 			- `logs`
 
-### Notes
+## Notes
 
 1. To minimize the run time, we changed `IEEG_PATS` to **6, 11, and 16** instead of choosing all 16 patients. *(Total run time = 00:01:27 for the three patients)*
 2. **No randomization** was used in the encoded vectors; therefore there is no need to add test number in the encoded vectors because it is exactly in the order of test files.
