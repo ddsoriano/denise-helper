@@ -1,7 +1,5 @@
-Denise Soriano
-
-Alexis Czezar Torreno
-
+Denise Soriano  
+Alexis Czezar Torreno  
 Mel-Jie Bentz Del Mundo
 
 ***
