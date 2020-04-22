@@ -35,7 +35,7 @@ Since we have to iterate multiple times, the solution we did is we created a new
 
 	python autoemail.py <NUM_RUN>
 
-### Optional arguments:
+#### Optional arguments:
 
 - `--make` or `-m` specifies which datasets you want to iterate. Choose from `mer`, `emg`, `ieeg`, `feat`, `lang`, or `all`. Note that `python autoemail.py <NUM_RUN> --make all` is the same as `python autoemail.py <NUM_RUN>`.
 - `--email` or `-e` if you want to email a copy of the zip file to the recipient/s of your choice. Specify the email recipients at *config.py*.
