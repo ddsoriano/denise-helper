@@ -22,6 +22,14 @@ Mel-Jie Bentz Del Mundo
 1. To minimize the run time, we changed `IEEG_PATS` to **6, 11, and 16** instead of choosing all 16 patients. *(Total run time = 00:01:27 for the three patients)*
 2. **No randomization** was used in the encoded vectors; therefore there is no need to add test number in the encoded vectors because it is exactly in the order of test files.
 3. Finally, we ran this code in Tensorflow version **2.0** instead of 2.1.
+4. Datasets considered are **mer, emg, ieeg, feat, and lang**.
+
+## Changes to the Original (Youbin's) Code
+
+1. Saved `assoc_mem_<dataset>` as **.csv** and not .npy.
+2. In each **encode()** (per dataset.py), we used `tf.print()` to save the encoded test vectors into CSV. The vectors vary for each dataset hence it is different for each **encode()**.
+
+***
 
 # Guide to Using autoemail.py
 
