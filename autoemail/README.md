@@ -41,8 +41,14 @@ To run:
 
 #### Optional arguments:
 
-- `--make` or `-m` specifies which datasets you want to iterate. Choose from `mer`, `emg`, `ieeg`, `feat`, `lang`, or `all`. Note that `python autoemail.py <NUM_RUN> --make all` is the same as `python autoemail.py <NUM_RUN>`.
+- `--make` or `-m` specifies which datasets you want to iterate. Choose from `mer`, `emg`, `ieeg`, `feat`, `lang`, or `all`. For more than one dataset, separate them with commas. Note that `python autoemail.py <NUM_RUN> --make all` is the same as `python autoemail.py <NUM_RUN>`.
 - `--email` or `-e` if you want to email a copy of the zip file to the recipient/s of your choice. Specify the email recipients at *config.py*.
+
+For example, if I want to run 6 iterations of just `mer`, `feat`, and `ieeg`, then email specific people to tell them when it's done:
+
+	python autoemail.py 6 --make mer,feat,ieeg --email
+
+This code can be edited to add more datasets in the accepted `make` commands list, such as `dna`. Just edit the `datasets` list in **autoemail.py**!
 
 ### Setting up Gmail account
 
@@ -52,6 +58,14 @@ If you want to use the email feature, a Gmail account is necessary. I couldn't g
 2. Turn on 'less secure apps access' through this [link](https://myaccount.google.com/lesssecureapps?pli=1).
 
 NOTE: This wouldn't work if you have 2-step verification on for your Gmail. To use this program, turn 2-step verification OFF.
+
+### Configure Email Details
+
+Input your email address and password inside **config.py**. **Don't show your password to anyone!**
+
+Also input your hawk username and the recipient/s (as a list) in config.py.
+
+NOTE: This programs assumes that you are working in the **hawk** server. If you are not working in this server, just change the basepath variable in the main of autoemail.py.
 
 ***
 
