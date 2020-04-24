@@ -1,2 +1,2 @@
-# denise-helper
-Simple automation programs
+# autotrans
+Translate excel files to English
